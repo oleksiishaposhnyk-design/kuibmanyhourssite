@@ -6,7 +6,13 @@ nav a { margin-left:12px; color:white; text-decoration:none }
 .container { max-width:1000px; margin:0 auto; }
 .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-top:20px }
 .card { background:white; padding:12px; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.06); }
-.card img { width:100%; height:160px; object-fit:cover; border-radius:8px }
+.card img { 
+  width:100%; 
+  height:auto;         /* авто-висота, зберігає пропорції */
+  max-height:300px;    /* максимальна висота */
+  object-fit:contain;  /* щоб не обрізати зображення */
+  border-radius:8px; 
+}
 .btn { display:inline-block; padding:8px 12px; border-radius:8px; background:#0ea5a4; color:white; border:none; cursor:pointer; text-decoration:none }
 .form { max-width:400px; display:flex; flex-direction:column; gap:10px; }
 input { padding:10px; border-radius:8px; border:1px solid #ddd }
